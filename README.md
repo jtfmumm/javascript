@@ -1,6 +1,6 @@
 # TheLadders JavaScript Style Guide() {
 
-*A mostly reasonable approach to JavaScript*
+*A mostly reasonable approach to JavaScript (forked from Airbnb and modified)*
 
 
 ## Table of Contents
