@@ -897,11 +897,11 @@
 
     ```javascript
     // bad
-    this.__firstName__ = "Panda";
-    this.firstName_ = "Panda";
+    this.__firstName__ = "Ada";
+    this.firstName_ = "Ada";
 
     // good
-    this._firstName = "Panda";
+    this._firstName = "Ada";
     ```
 
   - When saving a reference to `this` use `_this`.
