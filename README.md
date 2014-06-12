@@ -556,7 +556,7 @@
 
     // bad
     function getType() {
-      console.log('fetching type...');
+      console.log("fetching type...");
       // set the default type to "no type"
       var type = this._type || "no type";
 
@@ -702,7 +702,7 @@
 
     // bad
     var leds = stage.selectAll(".led").data(data).enter().append("svg:svg").class("led", true)
-        .attr("width",  (radius + margin) * 2).append('svg:g')
+        .attr("width",  (radius + margin) * 2).append("svg:g")
         .attr("transform", "translate(" + (radius + margin) + "," + (radius + margin) + ")")
         .call(tron.led);
 
@@ -711,7 +711,7 @@
         .data(data)
       .enter().append("svg:svg")
         .class("led", true)
-        .attr('width',  (radius + margin) * 2)
+        .attr("width",  (radius + margin) * 2)
       .append("svg:g")
         .attr("transform", "translate(" + (radius + margin) + "," + (radius + margin) + ")")
         .call(tron.led);
@@ -1134,19 +1134,19 @@
 
     ```javascript
     // bad
-    $('ul', '.sidebar').hide();
+    $("ul", ".sidebar").hide();
 
     // bad
-    $('.sidebar').find('ul').hide();
+    $(".sidebar").find("ul").hide();
 
     // good
-    this.$el.find('.sidebar ul').hide();
+    this.$el.find(".sidebar ul").hide();
 
     // good
-    this.$el.find('.sidebar > ul').hide();
+    this.$el.find(".sidebar > ul").hide();
 
     // good
-    $sidebar.find('ul').hide();
+    $sidebar.find("ul").hide();
     ```
 
 **[⬆ back to top](#table-of-contents)**

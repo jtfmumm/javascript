@@ -1,5 +1,5 @@
 /**
- * Airbnb JSHint settings for use with SublimeLinter and Sublime Text 2.
+ * TheLadders JSHint settings for use with SublimeLinter and Sublime Text 2.
  *
  *   1. Install SublimeLinter at https://github.com/SublimeLinter/SublimeLinter
  *   2. Open user preferences for the SublimeLinter package in Sublime Text 2
@@ -43,8 +43,8 @@
       // Suppress warnings about == null comparisons.
       "eqnull": true,
 
-      // Enforce tab width of 2 spaces.
-      "indent": 2,
+      // Enforce tab width of 4 spaces.
+      "indent": 4,
 
       // Prohibit use of a variable before it is defined.
       "latedef": true,
@@ -52,8 +52,8 @@
       // Require capitalized names for constructor functions.
       "newcap": true,
 
-      // Enforce use of single quotation marks for strings.
-      "quotmark": "single",
+      // Enforce use of double quotation marks for strings.
+      "quotmark": "double",
 
       // Prohibit trailing whitespace.
       "trailing": true,
