@@ -127,7 +127,7 @@
 
 ## Strings
 
-  - Use single quotes `""` for strings
+  - Use double quotes `""` for strings
 
     ```javascript
     // bad
