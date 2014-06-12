@@ -131,35 +131,16 @@
 
     ```javascript
     // bad
-    var name = 'Bob Parr';
+    var name = 'Immanuel Kant';
 
     // good
-    var name = "Bob Parr";
+    var name = "Immanuel Kant";
 
     // bad
-    var fullName = 'Bob ' + this.lastName;
+    var fullName = 'Immanuel ' + this.lastName;
 
     // good
-    var fullName = "Bob " + this.lastName;
-    ```
-
-  - Strings longer than 80 characters should be written across multiple lines using string concatenation.
-  - Note: If overused, long strings with concatenation could impact performance. [jsPerf](http://jsperf.com/ya-string-concat) & [Discussion](https://github.com/airbnb/javascript/issues/40)
-
-    ```javascript
-    // bad
-    var errorMessage = "This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.";
-
-    // bad
-    var errorMessage = "This is a super long error that was thrown because \
-    of Batman. When you stop to think about how Batman had anything to do \
-    with this, you would get nowhere \
-    fast.";
-
-    // good
-    var errorMessage = "This is a super long error that was thrown because " +
-      "of Batman. When you stop to think about how Batman had anything to do " +
-      "with this, you would get nowhere fast.";
+    var fullName = "Immanuel " + this.lastName;
     ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -182,7 +163,7 @@
 
     // immediately-invoked function expression (IIFE)
     (function() {
-      console.log("Welcome to the Internet. Please follow me.");
+      console.log("You want it to be one way... but it's the other way.");
     })();
     ```
 
@@ -249,31 +230,31 @@
   - Use dot notation when accessing properties.
 
     ```javascript
-    var luke = {
-      jedi: true,
-      age: 28
+    var plato = {
+      athenian: true,
+      age: 30
     };
 
     // bad
-    var isJedi = luke["jedi"];
+    var isAthenian = plato["athenian"];
 
     // good
-    var isJedi = luke.jedi;
+    var isAthenian = plato.athenian;
     ```
 
   - Use subscript notation `[]` when accessing properties with a variable.
 
     ```javascript
-    var luke = {
-      jedi: true,
-      age: 28
+    var plato = {
+      athenian: true,
+      age: 30
     };
 
     function getProp(prop) {
-      return luke[prop];
+      return plato[prop];
     }
 
-    var isJedi = getProp("jedi");
+    var isAthenian = getProp("athenian");
     ```
 
 **[⬆ back to top](#table-of-contents)**
@@ -285,24 +266,24 @@
 
     ```javascript
     // bad
-    superPower = new SuperPower();
+    treatise = new Treatise();
 
     // good
-    var superPower = new SuperPower();
+    var treatise = new Treatise();
     ```
 
   - Use separate `var` declarations for multiple variables and declare each variable on a new line.
 
     ```javascript
     // bad
-    var items = getItems(),
-        goSportsTeam = true,
-        dragonball = "z";
+    var books = getBooks(),
+        peaceful = true,
+        library = "Alexandria";
 
     // good
-    var items = getItems();
-    var goSportsTeam = true;
-    var dragonball = "z";
+    var books = getBooks();
+    var peaceful = true;
+    var library = "Alexandria";
     ```
 
   - Assign variables at the top of their scope. This helps avoid issues with variable declaration and assignment hoisting related issues.
@@ -400,10 +381,10 @@
 
     ```javascript
     function example() {
-      superPower(); // => Flying
+      read(); // logs "Human reason has the peculiar fate in one species of its cognitions..."
 
-      function superPower() {
-        console.log("Flying");
+      function read() {
+        console.log("Human reason has the peculiar fate in one species of its cognitions...");
       }
     }
     ```
@@ -639,15 +620,15 @@
     }
 
     // bad
-    dog.set("attr",{
+    falcon.set("attr",{
       age: "1 year",
-      breed: "Bernese Mountain Dog"
+      breed: "Maltese"
     });
 
     // good
-    dog.set("attr", {
+    falcon.set("attr", {
       age: "1 year",
-      breed: "Bernese Mountain Dog"
+      breed: "Maltese"
     });
     ```
 
@@ -736,18 +717,18 @@
 
     // bad
     var hero = {
-        firstName: "Bob"
-      , lastName: "Parr"
-      , heroName: "Mr. Incredible"
-      , superPower: "strength"
+        firstName: "Immanuel"
+      , lastName: "Kant"
+      , birthPlace: "Koenigsberg"
+      , masterWork: "The Critique of Pure Reason"
     };
 
     // good
     var hero = {
-      firstName: "Bob",
-      lastName: "Parr",
-      heroName: "Mr. Incredible",
-      superPower: "strength"
+      firstName: "Immanuel",
+      lastName: "Kant",
+      birthPlace: "Koenigsberg",
+      masterWork: "The Critique of Pure Reason"
     };
     ```
 
@@ -761,19 +742,19 @@
     ```javascript
     // bad
     (function() {
-      var name = "Skywalker"
+      var name = "Ada"
       return name
     })()
 
     // good
     (function() {
-      var name = "Skywalker";
+      var name = "Ada";
       return name;
     })();
 
     // good
     ;(function() {
-      var name = "Skywalker";
+      var name = "Ada";
       return name;
     })();
     ```
@@ -888,14 +869,14 @@
     var this_is_my_object = {};
     function c() {}
     var u = new user({
-      name: "Bob Parr"
+      name: "Ada Lovelace"
     });
 
     // good
     var thisIsMyObject = {};
     function thisIsMyFunction() {}
     var user = new User({
-      name: "Bob Parr"
+      name: "Ada Lovelace"
     });
     ```
 
@@ -972,22 +953,22 @@
 
     ```javascript
     // bad
-    dragon.getAge();
+    bowie.getAlbums();
 
     // good
-    dragon.age();
+    bowie.albums();
     ```
 
   - If the property is a boolean, use isVal() or hasVal()
 
     ```javascript
     // bad
-    if (!dragon.age()) {
+    if (!bowie.albums()) {
       return false;
     }
 
     // good
-    if (!dragon.hasAge()) {
+    if (!bowie.hasAlbums()) {
       return false;
     }
     ```
@@ -1000,28 +981,28 @@
   - Assign methods to the prototype object, instead of overwriting the prototype with a new object. Overwriting the prototype makes inheritance impossible: by resetting the prototype you'll overwrite the base!
 
     ```javascript
-    function Jedi() {
-      console.log("new jedi");
+    function Writer() {
+      console.log("new writer");
     }
 
     // bad
-    Jedi.prototype = {
-      fight: function() {
-        console.log("fighting");
+    Writer.prototype = {
+      procrastinate: function() {
+        console.log("procrastinating");
       },
 
-      block: function() {
-        console.log("blocking");
+      dream: function() {
+        console.log("dreaming");
       }
     };
 
     // good
-    Jedi.prototype.fight = function() {
-      console.log("fighting");
+    Writer.prototype.procrastinate = function() {
+      console.log("procrastinating");
     };
 
-    Jedi.prototype.block = function() {
-      console.log("blocking");
+    Writer.prototype.dream = function() {
+      console.log("dreaming");
     };
     ```
 
@@ -1029,50 +1010,50 @@
 
     ```javascript
     // bad
-    Jedi.prototype.jump = function() {
-      this.jumping = true;
+    Writer.prototype.resolve = function() {
+      this.madeResolution = true;
       return true;
     };
 
-    Jedi.prototype.setHeight = function(height) {
-      this.height = height;
+    Writer.prototype.imagineMovingTo = function(destination) {
+      this.destination = destination;
     };
 
-    var luke = new Jedi();
-    luke.jump(); // => true
-    luke.setHeight(20) // => undefined
+    var roommate = new Writer();
+    roommate.resolve(); // => true
+    roommate.imagineMovingTo("Paris") // => undefined
 
     // good
-    Jedi.prototype.jump = function() {
-      this.jumping = true;
+    Writer.prototype.resolve = function() {
+      this.madeResolution = true;
       return this;
     };
 
-    Jedi.prototype.setHeight = function(height) {
-      this.height = height;
+    Writer.prototype.imagineMovingTo = function(destination) {
+      this.destination = destination;
       return this;
     };
 
-    var luke = new Jedi();
+    var roommate = new Writer();
 
-    luke.jump()
-      .setHeight(20);
+    roommate.resolve()
+      .imagineMovingTo("Paris");
     ```
 
   - It's okay to write a custom toString() method, just make sure it works successfully and causes no side effects.
 
     ```javascript
-    function Jedi(options) {
+    function Writer(options) {
       options || (options = {});
       this.name = options.name || "no name";
     }
 
-    Jedi.prototype.getName = function getName() {
+    Writer.prototype.getName = function getName() {
       return this.name;
     };
 
-    Jedi.prototype.toString = function toString() {
-      return "Jedi - " + this.getName();
+    Writer.prototype.toString = function toString() {
+      return "Writer - " + this.getName();
     };
     ```
 
