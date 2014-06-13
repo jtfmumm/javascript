@@ -187,6 +187,55 @@
     imbibe("seltzer");
     ```
 
+  - Follow a top down flow for declaring functions.  The code should read like a newspaper.  
+
+    ```javascript
+    // bad
+    function readNextPage() {
+      console.log("This is getting interesting...");
+    }
+
+    var Book = {
+      turnPage: readNextPage()
+    }
+
+    // bad
+    function end() {
+      console.log("Oh no, a twist!");
+    }
+
+    function begin() {
+      console.log("What's going to happen next?");
+      end();
+    }
+
+    function readBook() {
+      begin();
+    }
+
+    // good
+    var Book = {
+      turnPage: readNextPage()
+    }
+
+    function readNextPage() {
+      console.log("This is getting interesting...");
+    }
+
+    // good
+    function readBook() {
+      begin();
+    }
+
+    function begin() {
+      console.log("What's going to happen next?");
+      end();
+    }
+
+    function end() {
+      console.log("Oh no, a twist!");
+    }
+
   - Never declare a function in a non-function block (if, while, etc). Assign the function to a variable instead. Browsers will allow you to do it, but they all interpret it differently, which is bad.
   - **Note:** ECMA-262 defines a `block` as a list of statements. A function declaration is not a statement. [Read ECMA-262's note on this issue](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf#page=97).
 
