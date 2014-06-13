@@ -534,7 +534,7 @@
     function getType() {
       console.log("fetching type...");
       // set the default type to "no type"
-      var type = this._type || "no type";
+      var type = this.type || "no type";
 
       return type;
     }
@@ -544,7 +544,7 @@
       console.log("fetching type...");
 
       // set the default type to "no type"
-      var type = this._type || "no type";
+      var type = this.type || "no type";
 
       return type;
     }
@@ -634,31 +634,6 @@
 
     // good
     var x = y + 5;
-    ```
-
-  *NOTE* SHOULD WE FOLLOW THIS PRACTICE?
-  - End files with a single newline character.
-
-    ```javascript
-    // bad
-    (function(global) {
-      // ...stuff...
-    })(this);
-    ```
-
-    ```javascript
-    // bad
-    (function(global) {
-      // ...stuff...
-    })(this);↵
-    ↵
-    ```
-
-    ```javascript
-    // good
-    (function(global) {
-      // ...stuff...
-    })(this);↵
     ```
 
   - Use indentation when making long method chains.
@@ -884,18 +859,6 @@
     var good = new User({
       name: "yup"
     });
-    ```
-
-  *NOTE* WE DON'T DO THIS, BUT MAYBE WE SHOULD?
-  - Use a leading underscore `_` when naming private properties
-
-    ```javascript
-    // bad
-    this.__firstName__ = "Ada";
-    this.firstName_ = "Ada";
-
-    // good
-    this._firstName = "Ada";
     ```
 
   - When saving a reference to `this` use `_this`.
