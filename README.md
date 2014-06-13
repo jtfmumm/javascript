@@ -492,16 +492,13 @@
 
 ## Comments
 
-  *NOTE* HOW SHOULD WE DO THIS?
-  - Use `/** ... */` for multiline comments. Include a description, specify types and values for all parameters and return values.
+  - Use `/** ... */` for multiline comments. 
 
     ```javascript
     // bad
     // make() returns a new element
     // based on the passed in tag name
     //
-    // @param <String> tag
-    // @return <Element> element
     function make(tag) {
 
       // ...stuff...
@@ -514,8 +511,6 @@
      * make() returns a new element
      * based on the passed in tag name
      *
-     * @param <String> tag
-     * @return <Element> element
      */
     function make(tag) {
 
@@ -555,8 +550,7 @@
     }
     ```
 
-  *NOTE* DO WE WANT TO START FOLLOWING THIS PRACTICE?
-  - Prefixing your comments with `FIXME` or `TODO` helps other developers quickly understand if you're pointing out a problem that needs to be revisited, or if you're suggesting a solution to the problem that needs to be implemented. These are different than regular comments because they are actionable. The actions are `FIXME -- need to figure this out` or `TODO -- need to implement`.
+  - Prefixing your comments with FIXME, TODO, or HACK helps other developers quickly understand what kind of problem you're pointing out.  These are different than regular comments because they are actionable. FIXME indicates that a problem that still needs a solution.  TODO describes the form of a solution to a problem. HACK indicates a fast, suboptimal solution that should be improved. 
 
   - Use `// FIXME:` to annotate problems
 
