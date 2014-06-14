@@ -761,12 +761,6 @@
 		var name = "Ada";
 		return name;
 	})();
-
-	// good
-	;(function() {
-		var name = "Ada";
-		return name;
-	})();
 	```
 
 **[⬆ back to top](#table-of-contents)**
