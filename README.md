@@ -1040,12 +1040,8 @@
 		this.name = options.name || "no name";
 	}
 
-	Writer.prototype.getName = function getName() {
-		return this.name;
-	};
-
 	Writer.prototype.toString = function toString() {
-		return "Writer - " + this.getName();
+		return "Writer - " + this.name;
 	};
 	```
 
