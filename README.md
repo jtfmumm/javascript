@@ -48,7 +48,7 @@
 
 	```javascript
 	var foo = 1,
-			bar = foo;
+		bar = foo;
 
 	bar = 9;
 
@@ -62,7 +62,7 @@
 
 	```javascript
 	var foo = [1, 2],
-			bar = foo;
+		bar = foo;
 
 	bar[0] = 9;
 
@@ -101,8 +101,8 @@
 
 	```javascript
 	var len = items.length,
-			itemsCopy = [],
-			i;
+		itemsCopy = [],
+		i;
 
 	// bad
 	for (i = 0; i < len; i++) {
@@ -327,8 +327,8 @@
 	```javascript
 	// bad
 	var books = getBooks(),
-			peaceful = true,
-			library = "Alexandria";
+		peaceful = true,
+		library = "Alexandria";
 
 	// good
 	var books = getBooks();
@@ -702,9 +702,9 @@
 
 	// bad
 	var leds = stage.selectAll(".led").data(data).enter().append("svg:svg").class("led", true)
-			.attr("width",  (radius + margin) * 2).append("svg:g")
-			.attr("transform", "translate(" + (radius + margin) + "," + (radius + margin) + ")")
-			.call(tron.led);
+		.attr("width",  (radius + margin) * 2).append("svg:g")
+		.attr("transform", "translate(" + (radius + margin) + "," + (radius + margin) + ")")
+		.call(tron.led);
 
 	// good
 	var leds = stage.selectAll(".led")
@@ -713,7 +713,8 @@
 			.class("led", true)
 			.attr("width",  (radius + margin) * 2)
 		.append("svg:g")
-			.attr("transform", "translate(" + (radius + margin) + "," + (radius + margin) + ")")
+			.attr("transform", "translate(" + (radius + margin) + "," + 
+                (radius + margin)+ ")")
 			.call(tron.led);
 	```
 
