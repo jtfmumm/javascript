@@ -394,6 +394,22 @@
 	}
 	```
 
+- Do not declare a variable when initializing a for loop.
+
+	```javascript
+	// bad
+	for (var i = 0; i < 10; i ++) {
+		// ...stuff...
+	}
+
+	// good
+	var i;
+
+	for (i = 0; i < 10; i ++) {
+		// ...stuff...
+	}
+	```
+
 **[⬆ back to top](#table-of-contents)**
 
 
@@ -904,6 +920,16 @@
 	var good = new User({
 		name: "yup"
 	});
+	```
+
+- Use all caps separated by underscores for constant names
+
+	```javascript
+	// bad 
+	cpuSpeed = 1e12;
+
+	//good
+	CPU_SPEED = 1e12;
 	```
 
 - When saving a reference to `this` use `_this`.
